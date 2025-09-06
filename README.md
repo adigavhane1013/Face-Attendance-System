@@ -1,13 +1,64 @@
+Face Recognition Attendance System
+This project is a Facial Recognition Attendance System built using Python and OpenCV. It automates attendance marking by recognizing faces in real-time through a webcam, simplifying manual attendance processes.
 
-Face Recognition Attendance System is an innovative Python-based desktop application designed to simplify and automate the process of attendance tracking using real-time face recognition technology. It offers a touchless and efficient alternative to traditional manual or biometric systems by leveraging a webcam and advanced facial recognition libraries.
+Features
+Real-time face detection and recognition using OpenCV and face_recognition library
 
-At its core, the system allows users to **register themselves by capturing face images** through the webcam. Each user is required to take at least five face images from different angles to ensure accurate recognition. These images are then stored locally and used to build a facial database. During registration, the application uses OpenCV to detect faces and saves the captured images into an organized folder structure for future reference.
+Register new users by capturing multiple face images via webcam
 
-Once the registration is complete, the attendance module  can be activated. The system starts the webcam and begins scanning for faces in real time. Using the powerful `face_recognition` library, the application compares detected faces with the stored images of registered users. If a match is found, the system marks attendance automatically by logging the user's name, along with the current date and time, into a CSV file. Each user’s attendance is marked only once per session to avoid duplication.
+Store attendance records with timestamps and save them as CSV files
 
-The system also includes a **built-in attendance viewer**, allowing users to review past records. Users can select a specific date to view who was present on that day, and optionally, export the data into an Excel file with a single click. This feature is powered by the Pandas and Openpyxl libraries, making it easy to generate reports and analyze attendance data.
+User-friendly GUI built with Tkinter for easy interaction
 
-The entire user interface is built using **Tkinter**, Python’s standard GUI library, providing a clean, interactive, and responsive experience. With well-labeled buttons and real-time status updates, the application ensures ease of use even for non-technical users.
+Support for viewing, exporting, and managing attendance logs
 
-This project is ideal for **small institutes, classrooms, or offices** looking for a lightweight yet effective attendance solution. It showcases practical implementation of computer vision and machine learning in a user-friendly environment, making it a great portfolio project for students and developers alike.
+Modular and scalable design suitable for educational and office use
 
+Technologies Used
+Python
+
+OpenCV
+
+face_recognition library
+
+Tkinter (GUI)
+
+NumPy
+
+CSV for attendance record storage
+
+Setup Instructions
+Clone or download this repository.
+
+Install required libraries:
+
+bash
+pip install opencv-python face_recognition numpy Pillow  
+Run the main application file:
+
+bash
+python unatt.py  
+Use the GUI to register users and start the attendance system.
+
+Folder Structure
+Images/ – Stores registered user face images
+
+Attendance/ – Stores attendance CSV files
+
+unatt.py – Main application script
+
+Usage
+Register User: Capture at least 5 face images per user for better recognition accuracy.
+
+Start Attendance: Automatically detect and mark attendance for registered users in real-time.
+
+View Records: View and export attendance records to CSV files.
+
+Exit: Close the application safely.
+
+Notes
+Ensure your webcam is connected and accessible.
+
+Make sure to install dependencies before running the application.
+
+The system performs best in well-lit environments.
